@@ -146,7 +146,7 @@ const ComicPanelGenerator = () => {
                 <button className="delete-button" onClick={() => deleteComicPanel(index)}>
                   Delete
                 </button>
-                <div className="text-bubble">{generateRandomText()}</div>
+                {/* <div className="text-bubble">{generateRandomText()}</div> */}
                 <p className="change-text" onClick={() => handleInputChange(index, `New Text ${index + 1}`)}>
                   Change Text
                 </p>

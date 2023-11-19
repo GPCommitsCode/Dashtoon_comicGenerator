@@ -4,6 +4,8 @@ To install the npm packages : ***npm install***
 
 Run the project using : ***npm run***
 
+Install: ***npm install axios***
+
 Working of Project:
 
 Instructions:

@@ -123,11 +123,13 @@ const ComicPanelGenerator = () => {
             <br />
             1. Click on "Generate All" button to generate images of the default text.
             <br />
-            2. Click on individual "Generate" buttons to generate a specific image<br/> When clicked on the generate button for an individual text box all other generate button are also disable to have user more interactiveness.
-            <br />
+            2. Click on individual "Generate" buttons to generate a specific image or you can replace the specific image generated at any time by clicking on individual generate button.
+            <br/>
             3. Edit the text and click "Generate" to generate an image with the edited text.
             <br />
             4. The time taken to generate each image from the last ouput will be displayed in the output.
+            <br/>
+            5. whenever you get a black image due to response error you can click on delete button of that image and click generate only on that text once again only that image will be generated and all will remain same.
           </p>
         </div>
       </div>
@@ -143,13 +145,16 @@ const ComicPanelGenerator = () => {
               <>
                 <img src={imageUrl} alt={`Comic Panel ${index + 1}`} />
                 <div className="timer">Time taken: {timers[index]} seconds</div>
-                <button className="delete-button" onClick={() => deleteComicPanel(index)}>
+                <div><button className="delete-button" onClick={() => deleteComicPanel(index)}>
                   Delete
                 </button>
+
+                </div>
+               
                 {/* <div className="text-bubble">{generateRandomText()}</div> */}
-                <p className="change-text" onClick={() => handleInputChange(index, `New Text ${index + 1}`)}>
+                {/* <p className="change-text" onClick={() => handleInputChange(index, `New Text ${index + 1}`)}>
                   Change Text
-                </p>
+                </p> */}
               </>
             )}
           </div>
